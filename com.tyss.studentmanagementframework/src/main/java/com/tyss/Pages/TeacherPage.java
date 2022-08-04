@@ -14,7 +14,7 @@ public class TeacherPage {
 	{
 	PageFactory.initElements(driver,this);
 	}
-	//decleration
+	//declaration
 	@FindBy(id = "index_number")
 	private WebElement indexnumberTxt;
 	@FindBy(id = "full_name")
