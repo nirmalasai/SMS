@@ -9,40 +9,40 @@ public class TeacherLoginPage
 {
 	//initialization
 
-		public TeacherLoginPage(WebDriver driver)
-		{
-			PageFactory.initElements(driver, this);
-		}
+	public TeacherLoginPage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
 
-		//declaration
+	//declaration
 
-		@FindBy(name ="email")
-		private WebElement Email;
+	@FindBy(name ="email")
+	private WebElement Email;
 
-		@FindBy(name ="password")
-		private WebElement Password;
-		
-		@FindBy(xpath ="//a[.=\"Submit\"]")
-		private WebElement SubmitButton;
+	@FindBy(name ="password")
+	private WebElement Password;
 
-		//utilization
+	@FindBy(xpath ="//a[.=\"Submit\"]")
+	private WebElement SubmitButton;
 
-		public WebElement getEmail() {
-			return Email;
-		}
+	//utilization
 
-		public WebElement getSubmitButton() {
-			return SubmitButton;
-		}
+	public WebElement getEmail() {
+		return Email;
+	}
 
-		public WebElement getPassword() {
-			return Password;
-		}
-		
-		public void LogInToTeacher(String AdminEmail,String AdminPassword)
-		{
-			Email.sendKeys(AdminEmail);
-			Password.sendKeys(AdminPassword);
-			SubmitButton.click();
-		}
+	public WebElement getSubmitButton() {
+		return SubmitButton;
+	}
+
+	public WebElement getPassword() {
+		return Password;
+	}
+
+	public void LogInToTeacher(String AdminEmail,String AdminPassword)
+	{
+		Email.sendKeys(AdminEmail);
+		Password.sendKeys(AdminPassword);
+		SubmitButton.click();
+	}
 }

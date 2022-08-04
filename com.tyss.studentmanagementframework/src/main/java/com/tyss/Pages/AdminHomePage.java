@@ -14,7 +14,6 @@ public class AdminHomePage
 		PageFactory.initElements(driver, this);
 	}
 
-
 	//declaration
 
 	@FindBy(xpath ="//a[.=\"Dashboard\"]")
@@ -125,27 +124,27 @@ public class AdminHomePage
 
 	@FindBy(xpath ="//a[@href=\"all_events.php\"]")
 	private WebElement AllEvent;
-	
-	
-	
+
+
+
 	@FindBy(xpath ="//a[.=\"Ingenious Developer1\"]")
 	private WebElement IngeniousDeveloper1;
-	
+
 	@FindBy(xpath ="//span[@class=\"label label-warning\"]")
 	private WebElement Notification;
-	
+
 	@FindBy(xpath ="//a[@onclick=\"showFriendRequest('1','Teacher')\"]")
 	private WebElement FriendRequest;
-	
+
 	@FindBy(xpath ="//i[@class=\"fa fa-envelope-o\"]")
 	private WebElement Messages;
-	
+
 	@FindBy(xpath ="//a[.=\"Profile\"]")
 	private WebElement Profile;
-	
+
 	@FindBy(xpath ="//a[.=\"Sign out\"]")
 	private WebElement Signout;
-	
+
 	@FindBy(xpath ="//a[.=\"ILovePrograming\"]")
 	private WebElement ILovePrograming;
 
@@ -155,7 +154,7 @@ public class AdminHomePage
 		return StudentAttendanceHistory;
 	}
 
-	
+
 
 	public WebElement getIngeniousDeveloper1() {
 		return IngeniousDeveloper1;
@@ -255,7 +254,7 @@ public class AdminHomePage
 		return AddAttendance;
 	}
 
-	
+
 
 	public WebElement getTeacherAttendanceHistory() {
 		return TeacherAttendanceHistory;
@@ -308,14 +307,13 @@ public class AdminHomePage
 	public WebElement getAllEvent() {
 		return AllEvent;
 	}
-	
-	
-	
+
+
+
 	public void SignoutFromAdminApp()
 	{
 		IngeniousDeveloper1.click();
 		Signout.click();
 	}
-
 
 }
