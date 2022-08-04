@@ -16,24 +16,24 @@ public class AdminHomePage
 
 	//declaration
 
-	@FindBy(xpath ="//a[.=\"Dashboard\"]")
+	@FindBy(xpath ="//span[.=\"Dashboard\"]")
 	private WebElement dashboard;
 
-	@FindBy(xpath ="//a[.=\"My Profile\"]")
+	@FindBy(xpath ="//span[.=\"My Profile\"]")
 	private WebElement myprofile;
 
-	@FindBy(xpath ="//a[.=\"Classroom\"]")
+	@FindBy(xpath ="//span[.=\"Classroom\"]")
 	private WebElement Classroom;
 
-	@FindBy(xpath ="//a[.=\"Grade\"]")
+	@FindBy(xpath ="//span[.=\"Grade\"]")
 	private WebElement Grade;
 
-	@FindBy(xpath ="//a[.=\"Subject\"]")
+	@FindBy(xpath ="//span[.=\"Subject\"]")
 	private WebElement Subject;
 
 
 
-	@FindBy(xpath ="//a[.=\"Teacher\"]")
+	@FindBy(xpath ="//span[.=\"Teacher\"]")
 	private WebElement Teacher;
 
 	@FindBy(xpath ="//a[@href=\"teacher.php\"]")
@@ -44,15 +44,15 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Subject Routing\"]")
+	@FindBy(xpath ="//span[.=\"Subject Routing\"]")
 	private WebElement SubjectRouting;
 
-	@FindBy(xpath ="//a[.=\"Timetable\"]")
+	@FindBy(xpath ="//span[.=\"Timetable\"]")
 	private WebElement Timetable;
 
 
 
-	@FindBy(xpath ="//a[.=\"Student\"]")
+	@FindBy(xpath ="//span[.=\"Student\"]")
 	private WebElement Student;
 
 	@FindBy(xpath ="//a[@href=\"student.php\"]")
@@ -66,7 +66,7 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Student Payment\"]")
+	@FindBy(xpath ="//span[.=\"Student Payment\"]")
 	private WebElement StudentPayment;
 
 
@@ -85,7 +85,7 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Exam\"]")
+	@FindBy(xpath ="//span[.=\"Exam\"]")
 	private WebElement Exam;
 
 	@FindBy(xpath ="//a[@href=\"exam.php\"]")
@@ -101,11 +101,11 @@ public class AdminHomePage
 	private WebElement StudentExamMarkHistory;
 
 
-	@FindBy(xpath ="//a[.=\"Petty Cash\"]")
+	@FindBy(xpath ="//span[.=\"Petty Cash\"]")
 	private WebElement PettyCash;
 
 
-	@FindBy(xpath ="//a[.=\"Friends\"]")
+	@FindBy(xpath ="//span[.=\"Friends\"]")
 	private WebElement Friends;
 
 	@FindBy(xpath ="//a[@href=\"add_friends.php\"]")
@@ -116,7 +116,7 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Event\"]")
+	@FindBy(xpath ="//span[.=\"Event\"]")
 	private WebElement Event;
 
 	@FindBy(xpath ="//a[@href=\"my_events.php\"]")
@@ -127,7 +127,7 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Ingenious Developer1\"]")
+	@FindBy(xpath ="//span[.=\"Ingenious Developer1\"]")
 	private WebElement IngeniousDeveloper1;
 
 	@FindBy(xpath ="//span[@class=\"label label-warning\"]")

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AdminLoginPage 
+public class ParentLoginPage
 {
 	//initialization
 
-	public AdminLoginPage(WebDriver driver)
+	public ParentLoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -27,7 +27,8 @@ public class AdminLoginPage
 
 	//utilization
 
-	public WebElement getEmail() {
+	public WebElement getEmail() 
+	{
 		return Email;
 	}
 
@@ -39,12 +40,10 @@ public class AdminLoginPage
 		return Password;
 	}
 
-	public void LogInToAdmin(String AdminEmail,String AdminPassword)
+	public void LogInToParent(String AdminEmail,String AdminPassword)
 	{
 		Email.sendKeys(AdminEmail);
 		Password.sendKeys(AdminPassword);
 		SubmitButton.click();
 	}
-
-
 }

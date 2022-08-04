@@ -17,10 +17,10 @@ public class TeacherHomePage
 
 	//declaration
 
-	@FindBy(xpath ="//a[.=\"Dashboard\"]")
+	@FindBy(xpath ="//span[.=\"Dashboard\"]")
 	private WebElement dashboard;
 
-	@FindBy(xpath ="//a[.=\"My Profile\"]")
+	@FindBy(xpath ="//span[.=\"My Profile\"]")
 	private WebElement myprofile;
 
 	@FindBy(xpath ="//a[@href=\"my_student.php\"]")
@@ -28,7 +28,7 @@ public class TeacherHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Subject\"]")
+	@FindBy(xpath ="//span[.=\"Subject\"]")
 	private WebElement Subject;
 
 	@FindBy(xpath ="//a[@href=\"my_subject2.php\"]")
@@ -38,7 +38,7 @@ public class TeacherHomePage
 	private WebElement AllSubject;
 
 
-	@FindBy(xpath ="//a[.=\"Timetable\"]")
+	@FindBy(xpath ="//span[.=\"Timetable\"]")
 	private WebElement Timetable;
 
 	@FindBy(xpath ="//a[@href=\"my_timetable2.php\"]")
@@ -48,7 +48,7 @@ public class TeacherHomePage
 	private WebElement AllTimetable;
 
 
-	@FindBy(xpath ="//a[.=\"Attendance\"]")
+	@FindBy(xpath ="//span[.=\"Attendance\"]")
 	private WebElement Attendance;
 
 	@FindBy(xpath ="//a[@href=\"my_attendance2.php\"]")
@@ -65,7 +65,7 @@ public class TeacherHomePage
 	private WebElement MyPettyCash;
 
 
-	@FindBy(xpath ="//a[.=\"Exam\"]")
+	@FindBy(xpath ="//span[.=\"Exam\"]")
 	private WebElement Exam;
 
 	@FindBy(xpath ="//a[@href=\"my_student_exam_marks.php\"]")
@@ -79,7 +79,7 @@ public class TeacherHomePage
 
 
 
-	@FindBy(xpath ="//a[.=\"Friends\"]")
+	@FindBy(xpath ="//span[.=\"Friends\"]")
 	private WebElement Friends;
 
 	@FindBy(xpath ="//a[@href=\"add_friends2.php\"]")
@@ -89,7 +89,7 @@ public class TeacherHomePage
 	private WebElement MyFriends;
 
 
-	@FindBy(xpath ="//a[.=\"Events\"]")
+	@FindBy(xpath ="//span[.=\"Events\"]")
 	private WebElement Events;
 
 	@FindBy(xpath ="//a[@href=\"my_events2.php\"]")
@@ -98,7 +98,7 @@ public class TeacherHomePage
 	@FindBy(xpath ="//a[@href=\"all_events2.php\"]")
 	private WebElement AllEvents;
 
-	@FindBy(xpath ="//a[.=\"Teacher 1fdsfhdfgdhi\"]")
+	@FindBy(xpath ="//span[.=\"Teacher 1fdsfhdfgdhi\"]")
 	private WebElement Teacher1fdsfhdfgdhi;
 
 	@FindBy(xpath ="//span[@class=\"label label-warning\"]")
