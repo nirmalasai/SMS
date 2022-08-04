@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage 
+public class AdminHomePage 
 {
 	//initialization
 
-	public HomePage(WebDriver driver)
+	public AdminHomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -79,7 +79,7 @@ public class HomePage
 	private WebElement AddAttendance;
 
 	@FindBy(xpath ="//a[@href=\"student_attendance_history.php\"]")
-	private WebElement AttendanceHistory;
+	private WebElement StudentAttendanceHistory;
 
 	@FindBy(xpath ="//a[@href=\"teacher_attendance_history.php\"]")
 	private WebElement TeacherAttendanceHistory;
@@ -125,8 +125,67 @@ public class HomePage
 
 	@FindBy(xpath ="//a[@href=\"all_events.php\"]")
 	private WebElement AllEvent;
+	
+	
+	
+	@FindBy(xpath ="//a[.=\"Ingenious Developer1\"]")
+	private WebElement IngeniousDeveloper1;
+	
+	@FindBy(xpath ="//span[@class=\"label label-warning\"]")
+	private WebElement Notification;
+	
+	@FindBy(xpath ="//a[@onclick=\"showFriendRequest('1','Teacher')\"]")
+	private WebElement FriendRequest;
+	
+	@FindBy(xpath ="//i[@class=\"fa fa-envelope-o\"]")
+	private WebElement Messages;
+	
+	@FindBy(xpath ="//a[.=\"Profile\"]")
+	private WebElement Profile;
+	
+	@FindBy(xpath ="//a[.=\"Sign out\"]")
+	private WebElement Signout;
+	
+	@FindBy(xpath ="//a[.=\"ILovePrograming\"]")
+	private WebElement ILovePrograming;
 
 	//utilization
+
+	public WebElement getStudentAttendanceHistory() {
+		return StudentAttendanceHistory;
+	}
+
+	
+
+	public WebElement getIngeniousDeveloper1() {
+		return IngeniousDeveloper1;
+	}
+
+
+
+	public WebElement getNotification() {
+		return Notification;
+	}
+
+	public WebElement getFriendRequest() {
+		return FriendRequest;
+	}
+
+	public WebElement getMessages() {
+		return Messages;
+	}
+
+	public WebElement getProfile() {
+		return Profile;
+	}
+
+	public WebElement getSignout() {
+		return Signout;
+	}
+
+	public WebElement getILovePrograming() {
+		return ILovePrograming;
+	}
 
 	public WebElement getDashboard() {
 		return dashboard;
@@ -196,9 +255,7 @@ public class HomePage
 		return AddAttendance;
 	}
 
-	public WebElement getAttendanceHistory() {
-		return AttendanceHistory;
-	}
+	
 
 	public WebElement getTeacherAttendanceHistory() {
 		return TeacherAttendanceHistory;
@@ -250,6 +307,14 @@ public class HomePage
 
 	public WebElement getAllEvent() {
 		return AllEvent;
+	}
+	
+	
+	
+	public void SignoutFromAdminApp()
+	{
+		IngeniousDeveloper1.click();
+		Signout.click();
 	}
 
 
