@@ -1,4 +1,4 @@
-package com.tyss.studentmanagementframework;
+package com.tyss.studentmanagement;
 
 public class Welcome {
 
