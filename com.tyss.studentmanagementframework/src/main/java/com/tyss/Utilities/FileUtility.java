@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+
 /**
  * 
  * @author SanjayBabu
@@ -30,4 +31,7 @@ public class FileUtility {
 		String value = pres.getProperty(key);
 		return value;
 	}
+
+
+	
 }

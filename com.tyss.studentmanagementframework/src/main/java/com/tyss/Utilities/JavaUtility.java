@@ -8,37 +8,47 @@ import java.util.Random;
  * @author SanjayBabu
  *
  */
+
+
+
 public class JavaUtility {
 	/**
-	 * its used to generate a random number
+	 * 
 	 * @return
 	 */
-	public int getRandomNumber() {
+	public int getRandomNum()
+	{
 		Random random=new Random();
 		int randNum = random.nextInt(1000);
 		return randNum;
 	}
 	/**
-	 * its used to get systemDateAndTime in IST Format
+	 * 
 	 * @return
 	 */
-	public String getSystemDateAndTimeInISTformat() {
+	public String getSystemDate()
+	{
 		Date date=new Date();
 		return date.toString();
+		
 	}
 	/**
-	 * its used to get system date and Time in required format
+	 * to get system date and time in required format
 	 * @return
 	 */
-	public String getSystemDateAndTimeInFormat() {
-		Date date=new Date();
-		String dateAndTime = date.toString();
-
-		String YYYY = dateAndTime.split(" ")[5];
-		String DD = dateAndTime.split(" ")[2];
-		int MM = date.getMonth()+1;
-
-		String finalFormat = YYYY+" "+DD+" "+MM;
+	public String getSystemDateInFormat()
+	{
+		Date datte =new Date();
+		String dateTime=datte.toString();
+		String[] dateArr=dateTime.split("");
+		int month=datte.getMonth()+1;
+		String date=dateArr[2];
+		String year=dateArr[5];
+		int day=datte.getDay();
+		String time=dateArr[3];
+		String finalFormat=month+" "+date+" "+year+" "+day+" "+time;
 		return finalFormat;
-	}
+		}
+	
+
 }

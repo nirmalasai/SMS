@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AdminTimetable {
+import com.tyss.Utilities.WebDriverUtility;
+
+public class AdminTimetable extends WebDriverUtility {
 	
 	//Initilization
 	public AdminTimetable(WebDriver driver)
@@ -18,6 +20,17 @@ public class AdminTimetable {
 	@FindBy(name="grade")private WebElement gradeDropDwn;
 	
 	@FindBy(linkText="Submit")private WebElement submitBtn;
+	
+	//utilization
+	public WebElement getGradeDropDwn() {
+		return gradeDropDwn;
+	}
+
+	public WebElement getSubmitBtn() {
+		return submitBtn;
+	}
+	
+	
 	
 	
 	

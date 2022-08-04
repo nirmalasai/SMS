@@ -79,7 +79,7 @@ public class BaseClass
 		System.out.println("Browser successfully launched");
 		//implicitly wait
 		sdriver=driver;
-		wLib.waitForPageToLoad(driver);
+		wLib.waitTillPageLoad(driver);
 		//enter the URL of the Application
 		sdriver.get(URL);
 		//maximize the screen
