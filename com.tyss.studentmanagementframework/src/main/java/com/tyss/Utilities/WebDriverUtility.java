@@ -287,8 +287,9 @@ public class WebDriverUtility {
 	 * 
 	 * @param driver
 	 * @param element
+	 * @return 
 	 */
-	public void takeScreenShot(WebDriver driver, String screenShotName) {
+	public static String takeScreenShot(WebDriver driver, String screenShotName) {
 		TakesScreenshot takescreenShot = (TakesScreenshot) driver;
 		File src = takescreenShot.getScreenshotAs(OutputType.FILE);
 		File dst = new File("./screenShots/" + screenShotName + ".PNG");
@@ -297,6 +298,7 @@ public class WebDriverUtility {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return screenShotName;
 	}
 	/**
 	 * this method is used for custom wait

@@ -68,5 +68,4 @@ public class ItestListenerImtn implements ITestListener{
 		// TODO Auto-generated method stub
 		report.flush();
 	}
-
 }

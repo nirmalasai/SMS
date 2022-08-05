@@ -70,7 +70,7 @@ public class HomePage extends WebDriverUtility{
 	
 	public void logout(WebDriver driver)
 	{                     
-		mouseOverAnElement(driver, administratorLnk);
+		mouseOverOnElement(driver, administratorLnk);
 		signoutLnk.click();
 	}
 }

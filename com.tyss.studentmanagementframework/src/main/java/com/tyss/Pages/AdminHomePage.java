@@ -11,9 +11,9 @@ public class AdminHomePage
 {
 	//initialization
 
-	public AdminHomePage(WebDriverUtility driver)
+	public AdminHomePage(WebDriver driver)
 	{
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver,this);
 	}
 
 	//declaration

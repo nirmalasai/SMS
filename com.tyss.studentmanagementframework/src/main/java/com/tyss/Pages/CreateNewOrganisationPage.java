@@ -71,11 +71,11 @@ public class CreateNewOrganisationPage extends WebDriverUtility{
 	}
 	public void selectIndustry(String industry)
 	{
-		selectDropDown(industryDropDown, industry);
+		select(industryDropDown, industry);
 	}
 	public void selectType(String type)
 	{
-		selectDropDown(typeDropDown, type);
+		select(typeDropDown, type);
 		saveBtn.click();
 	}
 }
