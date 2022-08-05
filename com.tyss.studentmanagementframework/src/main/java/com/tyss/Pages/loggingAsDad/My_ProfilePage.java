@@ -85,5 +85,4 @@ public class My_ProfilePage {
 	public WebElement getUpdateButton() {
 		return updateButton;
 	}
-	
 }
