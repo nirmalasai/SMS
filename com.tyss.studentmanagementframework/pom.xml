@@ -86,10 +86,10 @@
 	</dependencies>
 
     
-</dependency>
+
 
  
-  </dependencies>
+ 
 <build>
  	<plugins>
  	<plugin>
