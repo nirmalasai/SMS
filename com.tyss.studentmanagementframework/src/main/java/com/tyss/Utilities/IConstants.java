@@ -1,5 +1,6 @@
 package com.tyss.Utilities;
 
+
 public interface IConstants {
 	String filePath="./src/test/resources/commondata.properties";
 	String excelPath="./src/test/resources/SDET37TestData1.xlsx";

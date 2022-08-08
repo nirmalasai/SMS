@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
@@ -286,8 +287,9 @@ public class WebDriverUtility {
 	 * 
 	 * @param driver
 	 * @param element
+	 * @return 
 	 */
-	public void takeScreenShot(WebDriver driver, String screenShotName) {
+	public static String takeScreenShot(WebDriver driver, String screenShotName) {
 		TakesScreenshot takescreenShot = (TakesScreenshot) driver;
 		File src = takescreenShot.getScreenshotAs(OutputType.FILE);
 		File dst = new File("./screenShots/" + screenShotName + ".PNG");
@@ -296,6 +298,7 @@ public class WebDriverUtility {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return screenShotName;
 	}
 	/**
 	 * this method is used for custom wait
