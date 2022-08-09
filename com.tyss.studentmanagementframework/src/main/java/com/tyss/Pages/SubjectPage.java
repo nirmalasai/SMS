@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.tyss.Utilities.WebDriverUtility;
+import com.tyss.Utilities.WebDriverUtility;//done
 
 public class SubjectPage {
-	//initialisation
+	//initialisation 
 	public SubjectPage(SearchContext driver)
 	{
 		PageFactory.initElements(driver,this);
