@@ -129,7 +129,7 @@ public class AdminHomePage
 
 
 
-	@FindBy(xpath ="//span[.=\"Ingenious Developer1\"]")
+	@FindBy(xpath ="//span[@class='hidden-xs']")
 	private WebElement IngeniousDeveloper1;
 
 	@FindBy(xpath ="//span[@class=\"label label-warning\"]")

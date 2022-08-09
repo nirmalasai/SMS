@@ -7,16 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	//declaretion
-	@FindAll({@FindBy(xpath = "//input[@type='text']"),@FindBy(name = "user_n")})
+	//declaration
+	@FindAll({@FindBy(xpath = "//input[@type='text']"),@FindBy(name = "user_n")}) private WebElement usernametxtEdt;
 	//@FindBys({@FindBy(xpath = "//input[@type='text']"),@FindBy(name = "user_name")})
-	private WebElement usernametxtEdt;
+	//private WebElement usernametxtEdt;
 
-	@FindBy(name = "user_password")
+	@FindBy(id="password")
 	private WebElement passwordtxtEdt;
 
 
-	@FindBy(id = "submitButton")
+	@FindBy(id="btnSubmit")
 	private WebElement submitBtn;
 
 	//initialization

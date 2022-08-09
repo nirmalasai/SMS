@@ -30,7 +30,10 @@ public class AdminTimetable extends WebDriverUtility {
 		return submitBtn;
 	}
 	
-	
+	public void timeTable()
+	{
+		submitBtn.click();
+	}
 	
 	
 	

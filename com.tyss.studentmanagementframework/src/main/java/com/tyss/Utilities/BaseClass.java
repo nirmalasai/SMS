@@ -1,13 +1,8 @@
 package com.tyss.Utilities;
-/**
- * 
- * @author SanjayBabu
- *
- */
+
+import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -15,124 +10,88 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import com.tyss.Pages.HomePage;
+import com.tyss.Pages.AdminHomePage;
 import com.tyss.Pages.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass 
-{
+public class BaseClass {
+	
 	public static WebDriver sdriver;
 	public WebDriver driver;
-	public DataBaseUtility dLib=new DataBaseUtility();
-	public ExcelUtility eLib=new ExcelUtility();
-	public FileUtility fLib=new FileUtility();
-	public WebDriverUtility  wLib=new WebDriverUtility();
-	public JavaUtility jLib=new JavaUtility();
-
-	/**
-	 * connecting to database
-	 */
-	@BeforeSuite
+	public DataBaseUtility dbUtilities =new DataBaseUtility();
+	public ExcelUtility excelUtilities=new ExcelUtility();
+	public FileUtility fileUtilities=new FileUtility();
+	public WebDriverUtility wdUtilities=new WebDriverUtility();
+	public JavaUtility javaUtilities=new JavaUtility();
+	
+	
+	@BeforeSuite(groups= {"regressionTest","smokeTest"})
 	public void dbConfig()
 	{
-		dLib.connectToDB();
+		dbUtilities.connectToDB();
 	}
-	/**
-	 * launching the browser
-	 * @throws Throwable
-	 */
-	//@Parameters("BROWSER")
-	@BeforeClass
-	public void launchTheBrowser()
-	{  
-		String BROWSER = null;
-		try {
-			BROWSER = fLib.getPropertKeyValue("browser");
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
-		System.out.println(BROWSER);
-		String URL = null;
-		try {
-			URL = fLib.getPropertKeyValue("url");
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
-
-		if(BROWSER.equalsIgnoreCase("firefox"))
+	@BeforeClass(groups= {"regressionTest","smokeTest"})
+	//to lauch the browser
+	public void lauchTheBrowser()throws IOException
+	{
+		String BROWSER=fileUtilities.getPropertKeyValue("browser");
+		String URL=fileUtilities.getPropertKeyValue("url");
+		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();
-		}else if(BROWSER.equalsIgnoreCase("chrome"))
+			driver=WebDriverManager.chromedriver().create();
+		}
+		else if(BROWSER.equalsIgnoreCase("firefox"))
 		{
-			//	ChromeOptions chromeOptions=new ChromeOptions();
-			//	chromeOptions.setBinary("C:\\Users\\SanjayBabu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-			//	driver=new ChromeDriver(chromeOptions);
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			driver=WebDriverManager.firefoxdriver().create();
 		}
-		else {
-			driver=new ChromeDriver();
+		else
+		{
+			WebDriverManager.chromedriver().create();
 		}
-
-		System.out.println("Browser successfully launched");
-		//implicitly wait
-		sdriver=driver;
-		wLib.waitTillPageLoad(driver);
-		//enter the URL of the Application
-		sdriver.get(URL);
+		System.out.println("Browser launched");
+		
+		
+		//Enter the Url into the apllication
+		driver.get(URL);
+		
 		//maximize the screen
-		driver.manage().window().maximize();
+		wdUtilities.maximizeTheBrowser(driver);
+		
+		wdUtilities.waitTillPageLoad(driver);
+		
 	}
-	/**
-	 * login to application
-	 */
-	@BeforeMethod
-	public void loginToAppln()
+	
+	@BeforeMethod(groups= {"regressionTest","smokeTest"})
+	public void loginToApp() throws IOException
 	{
-		String USERNAME = null;
-		try {
-			USERNAME = fLib.getPropertKeyValue("username");
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
-		String PASSWORD = null;
-		try {
-			PASSWORD = fLib.getPropertKeyValue("password");
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
-
-		LoginPage lpage=new LoginPage(driver);
-		lpage.loginToAppli(USERNAME, PASSWORD);
-		System.out.println("Login successful");
+		String USERNAME=fileUtilities.getPropertKeyValue("username");
+		String PASSWORD=fileUtilities.getPropertKeyValue("password");
+		
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.loginToAppli(USERNAME, PASSWORD);
+		
+		System.out.println("Login Sucessful");
 	}
-	/**
-	 * logout from application
-	 */
-	@AfterMethod
-	public void logoutFromAppln()
+	@AfterMethod(groups= {"regressionTest","smokeTest"})
+	public void logoutFromApp()
 	{
-		HomePage hpage=new HomePage(driver);
-		hpage.logout(driver);
-		System.out.println("Logout successful");
+		AdminHomePage homepage=new AdminHomePage(driver);
+		homepage.SignoutFromAdminApp();
+		System.out.println("Logout Successful");
 	}
-	/**
-	 * close the browser
-	 */
-	@AfterClass
-	public void closeTheBrowser()
+	@AfterClass(groups= {"regressionTest","smokeTest"})
+	public void closeBrowser()
 	{
 		driver.quit();
-		System.out.println("Browser successfully closed");
+		System.out.println("Browser sucessfully closed");
 	}
-	/**
-	 * close database configuration
-	 */
-	@AfterSuite
-	public void closeDBconfig()
+	@AfterSuite(groups= {"regressionTest","smokeTest"})
+	public void closeDBConn()
 	{
-		dLib.closeDB();
+		dbUtilities.closeDB();
 	}
+
+	
+
 }
