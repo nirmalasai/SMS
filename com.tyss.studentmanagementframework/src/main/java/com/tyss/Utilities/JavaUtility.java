@@ -1,8 +1,15 @@
 package com.tyss.Utilities;
 
-
 import java.util.Date;
 import java.util.Random;
+
+/**
+ * 
+ * @author SanjayBabu
+ *
+ */
+
+
 
 public class JavaUtility {
 	/**
