@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.tyss.Utilities.FileUtility;
+
 public class LoginPage {
 	//declaretion
 	@FindAll({@FindBy(xpath = "//input[@type='text']"),@FindBy(name = "user_n")})
@@ -47,7 +49,7 @@ public class LoginPage {
 	 * click on submit button
 	 */
 
-	public void loginToAppli(String username,String password)
+	public void loginToAppli(FileUtility fileUtility)
 	{
 		usernametxtEdt.sendKeys(username);
 		passwordtxtEdt.sendKeys(password);
