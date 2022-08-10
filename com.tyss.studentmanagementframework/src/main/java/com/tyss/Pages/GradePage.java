@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GradePage {
+import com.tyss.Utilities.WebDriverUtility;
+
+public class GradePage extends WebDriverUtility {
 	// Declaration
 	@FindBy(id = "name")
 	private WebElement gradeName;
