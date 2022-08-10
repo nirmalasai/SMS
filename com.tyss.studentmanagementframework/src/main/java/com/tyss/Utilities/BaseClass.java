@@ -34,7 +34,7 @@ public class BaseClass
 	public JavaUtility jLib=new JavaUtility();
 
 	/**
-	 * connecting to database done
+	 * connecting to database
 	 * @throws SQLException 
 	 */
 	@BeforeSuite
