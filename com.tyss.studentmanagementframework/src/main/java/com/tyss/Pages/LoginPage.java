@@ -21,6 +21,8 @@ public class LoginPage {
 	@FindBy(id = "submitButton")
 	private WebElement submitBtn;
 
+	private CharSequence username;
+
 	//initialization
 	public LoginPage(WebDriver driver)
 	{
@@ -44,12 +46,13 @@ public class LoginPage {
 
 	/**
 	 * 
+	 * @param password 
 	 * @param username
 	 * @param password
 	 * click on submit button
 	 */
 
-	public void loginToAppli(FileUtility fileUtility)
+	public void loginToAppli(String username, String password)
 	{
 		usernametxtEdt.sendKeys(username);
 		passwordtxtEdt.sendKeys(password);
