@@ -115,7 +115,7 @@ public class BaseClass
 	/**
 	 * logout from application
 	 */
-	
+	//----
 	@AfterMethod
 	public void logoutFromAppln()
 	{
