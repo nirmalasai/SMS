@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tyss.studentmanagement.AddClassroom">
+      <class name="com.tyss.studentmanagement.CreateSubjectRoutingTest">
         <methods>
+          <include name="logoutFromAppln"/>
           <include name="dbConfig"/>
-          <include name="logoutFromApp"/>
-          <include name="loginToApp"/>
-          <include name="classroom"/>
-          <include name="closeBrowser"/>
-          <include name="closeDBConn"/>
-          <include name="lauchTheBrowser"/>
+          <include name="launchTheBrowser"/>
+          <include name="loginToAppln"/>
+          <include name="closeTheBrowser"/>
+          <include name="closeDBconfig"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- com.tyss.studentmanagement.AddClassroom -->
+      </class> <!-- com.tyss.studentmanagement.CreateSubjectRoutingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

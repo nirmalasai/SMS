@@ -26,6 +26,17 @@ public class GradePage {
 	@FindBy(id = "btnSubmit1")
 	private WebElement submitBtn;
 	@FindBy(xpath="//input[@type='search']")private WebElement searchBox;
+	@FindBy(xpath = "addNewRow(this)")
+	private WebElement addeMarkBtn;
+	
+	@FindBy(id = "//button[@id='btnSubmit1']")
+	private WebElement submiteMarkBtn;
+	
+	@FindBy(xpath = "//input[@name='mark_range[]']")
+	private WebElement addRangeText;
+	
+	@FindBy (id = "mark_grade_text_1")
+	private WebElement addGradeTxt;
 	
 
 	// initialization
@@ -68,6 +79,13 @@ public class GradePage {
 
 	public WebElement getSubmitBtn() {
 		return submitBtn;
+	}
+	public void addEmark(String range, String grade)
+	{
+		//addeMarkBtn.click();
+		addRangeText.sendKeys(range);
+		addGradeTxt.sendKeys(grade);
+		submiteMarkBtn.click();
 	}
 
 }

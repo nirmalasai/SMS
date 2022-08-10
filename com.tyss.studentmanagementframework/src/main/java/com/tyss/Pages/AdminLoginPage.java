@@ -22,7 +22,7 @@ public class AdminLoginPage
 	@FindBy(name ="password")
 	private WebElement Password;
 
-	@FindBy(xpath ="//a[.=\"Submit\"]")
+	@FindBy(id="btnSubmit")
 	private WebElement SubmitButton;
 
 	//utilization
