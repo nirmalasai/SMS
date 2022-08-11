@@ -19,22 +19,22 @@ public class AllTeachersTest extends BaseClass {
 		
 		AllTeachers allteachers=new AllTeachers(driver);
 		
-		String search=excelUtilities.getDataFromExcel("AllTeachers", 1, 1);
+		String search=eLib.getDataFromExcel("AllTeachers", 1, 1);
 		allteachers.getSearchEdt().sendKeys(search);
 		
 		allteachers.getEditBtn().click();
 		
-		String editName=excelUtilities.getDataFromExcel("AllTeachers", 1, 2);
+		String editName=eLib.getDataFromExcel("AllTeachers", 1, 2);
 		allteachers.editFullName(editName);
 		
 
-		String editnameintial=excelUtilities.getDataFromExcel("AllTeachers", 1, 3);
+		String editnameintial=eLib.getDataFromExcel("AllTeachers", 1, 3);
 		allteachers.editFullName(editnameintial);
 		
 		
 		allteachers.getSubmitEdt().click();
 		
-		wdUtilities.waitTillElementToClick(driver, homepage.getMyProfileLink());
+		wLib.waitTillElementToClick(driver, homepage.getMyProfileLink());
 
 		
 	

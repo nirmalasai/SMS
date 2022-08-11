@@ -1,11 +1,8 @@
 package com.tyss.studentmanagement;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -30,42 +27,33 @@ public void addTeacherpage()throws EncryptedDocumentException, IOException, Inte
 	
 	
 	
-	String indexno=javaUtilities.getRandomNum()+excelUtilities.getDataFromExcel("AddTeacher", 1, 1);
+	String indexno=jLib.getRandomNum()+eLib.getDataFromExcel("AddTeacher", 1, 1);
 	addTeacher.getIndexnumberTxt().sendKeys(indexno);
 	
-	String name=excelUtilities.getDataFromExcel("AddTeacher", 1, 2);
+	String name=eLib.getDataFromExcel("AddTeacher", 1, 2);
 	addTeacher.getFullnameText().sendKeys(name);
 	
-	String nameintial=excelUtilities.getDataFromExcel("AddTeacher", 1, 3);
+	String nameintial=eLib.getDataFromExcel("AddTeacher", 1, 3);
 	addTeacher.getNamewithinitialTxt().sendKeys(nameintial);
 	
-	String address=excelUtilities.getDataFromExcel("AddTeacher", 1, 4);
+	String address=eLib.getDataFromExcel("AddTeacher", 1, 4);
 	addTeacher.getAddressTxt().sendKeys(address);
 	
-	addTeacher.genderSelect(wdUtilities, 1);
+	addTeacher.genderSelect(wLib, 1);
 	
-	String phno=excelUtilities.getDataFromExcel("AddTeacher",1, 6);
+	String phno=eLib.getDataFromExcel("AddTeacher",1, 6);
 	addTeacher.getPhoneTxt().sendKeys(phno);
 	
 	
 	
-	String email=javaUtilities.getRandomNum()+excelUtilities.getDataFromExcel("AddTeacher", 1, 7);
+	String email=jLib.getRandomNum()+eLib.getDataFromExcel("AddTeacher", 1, 7);
 	addTeacher.getEmailTxt().sendKeys(email);
 	
-	String photo=excelUtilities.getDataFromExcel("AddTeacher", 1, 8);
+	String photo=eLib.getDataFromExcel("AddTeacher", 1, 8);
 	addTeacher.uploadPhoto(photo);
 	
 	addTeacher.submitBtn();
 	Thread.sleep(5000);
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 

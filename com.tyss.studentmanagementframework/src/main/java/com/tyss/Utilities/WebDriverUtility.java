@@ -1,7 +1,11 @@
 package com.tyss.Utilities;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Driver;
 import java.time.Duration;
 import java.util.Iterator;
 
@@ -10,6 +14,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -410,5 +415,43 @@ public class WebDriverUtility {
 		}
 		alert.dismiss();
 	}
+	
+	
+
+	public void javascript(WebDriver driver,WebElement finalpaymentsubmitbutton)
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()", finalpaymentsubmitbutton);
+	}
+	
+	public void robottabenter() throws AWTException, InterruptedException
+	{
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
+		Thread.sleep(1000);
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
+		Thread.sleep(1000);
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
+		Thread.sleep(1000);
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
+		Thread.sleep(1000);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(3000);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+			
+	}
+	public void robotenter() throws AWTException
+	{
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	
 
 }

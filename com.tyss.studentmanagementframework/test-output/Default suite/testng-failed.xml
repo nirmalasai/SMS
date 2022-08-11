@@ -3,17 +3,34 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.tyss.studentmanagement.AllTeachersTest">
+=======
+      <class name="com.tyss.studentmanagement.CreateGradeTest">
+>>>>>>> branch 'master' of https://github.com/nirmalasai/SMS.git
         <methods>
+          <include name="logoutFromAppln"/>
           <include name="dbConfig"/>
+<<<<<<< HEAD
           <include name="logoutFromApp"/>
           <include name="searchEdit"/>
           <include name="loginToApp"/>
           <include name="closeBrowser"/>
           <include name="closeDBConn"/>
           <include name="lauchTheBrowser"/>
+=======
+          <include name="launchTheBrowser"/>
+          <include name="main"/>
+          <include name="loginToAppln"/>
+          <include name="closeTheBrowser"/>
+          <include name="closeDBconfig"/>
+>>>>>>> branch 'master' of https://github.com/nirmalasai/SMS.git
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.tyss.studentmanagement.AllTeachersTest -->
+=======
+      </class> <!-- com.tyss.studentmanagement.CreateGradeTest -->
+>>>>>>> branch 'master' of https://github.com/nirmalasai/SMS.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

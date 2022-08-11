@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.tyss.Utilities.FileUtility;
+
 public class LoginPage {
 	//declaration
 	@FindAll({@FindBy(xpath = "//input[@type='text']"),@FindBy(name = "user_n")}) private WebElement usernametxtEdt;
@@ -18,6 +20,8 @@ public class LoginPage {
 
 	@FindBy(id="btnSubmit")
 	private WebElement submitBtn;
+
+	private CharSequence username;
 
 	//initialization
 	public LoginPage(WebDriver driver)
@@ -42,12 +46,13 @@ public class LoginPage {
 
 	/**
 	 * 
+	 * @param password 
 	 * @param username
 	 * @param password
 	 * click on submit button
 	 */
 
-	public void loginToAppli(String username,String password)
+	public void loginToAppli(String username, String password)
 	{
 		usernametxtEdt.sendKeys(username);
 		passwordtxtEdt.sendKeys(password);

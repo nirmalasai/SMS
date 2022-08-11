@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.tyss.Utilities.WebDriverUtility;//done
 
-public class SubjectPage {
+public class SubjectPage extends WebDriverUtility{
 	//initialisation 
 	public SubjectPage(SearchContext driver)
 	{
