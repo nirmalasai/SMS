@@ -32,6 +32,5 @@ public class AdminSubjectRouting {
 	@FindBy(xpath="//a[@onclick='updateSubjectFee(this)']")private WebElement feeSaveChkbox;
 	
 	
-	
 
 }
