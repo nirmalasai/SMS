@@ -34,7 +34,7 @@ public class BaseClass
 	public JavaUtility jLib=new JavaUtility();
 
 	/**
-	 * connecting to database
+	 * connecting to database done
 	 * @throws SQLException 
 	 */
 	@BeforeSuite
@@ -115,29 +115,28 @@ public class BaseClass
 	/**
 	 * logout from application
 	 */
-	//----
-	@AfterMethod
-	public void logoutFromAppln()
-	{
-		AdminHomePage hpage=new AdminHomePage(driver);
-		hpage.SignoutFromAdminApp();
-	}
-
-	/**
-	 * close the browser
-	 */
-	@AfterClass
-	public void closeTheBrowser()
-	{
-		driver.quit();
-		System.out.println("Browser successfully closed");
-	}
-	/**
-	 * close database configuration
-	 */
-	@AfterSuite
-	public void closeDBconfig()
-	{
-		dLib.closeDB();
-	}
+//	@AfterMethod
+//	public void logoutFromAppln()
+//	{
+//		AdminHomePage hpage=new AdminHomePage(driver);
+//		hpage.SignoutFromAdminApp();
+//	}
+//
+//	/**
+//	 * close the browser
+//	 */
+//	@AfterClass
+//	public void closeTheBrowser()
+//	{
+//		driver.quit();
+//		System.out.println("Browser successfully closed");
+//	}
+//	/**
+//	 * close database configuration
+//	 */
+//	@AfterSuite
+//	public void closeDBconfig()
+//	{
+//		dLib.closeDB();
+//	}
 }
