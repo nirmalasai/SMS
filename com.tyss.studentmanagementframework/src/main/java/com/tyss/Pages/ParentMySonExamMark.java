@@ -17,7 +17,6 @@ public class ParentMySonExamMark extends WebDriverUtility
 			PageFactory.initElements(driver, this);
 		}
 	//declaration
-
 		@FindBy(xpath ="//select[@id=\"exam\"]")
 		private WebElement examdropdown;
 
