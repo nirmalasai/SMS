@@ -9,7 +9,7 @@ import com.tyss.Pages.AdminHomePage;
 import com.tyss.Utilities.BaseClass;
 
 
-public class AddClassroom extends BaseClass{
+public class AddClassroomTest extends BaseClass{
 	@Test
 	public void classroom()throws EncryptedDocumentException, FileNotFoundException {
 		

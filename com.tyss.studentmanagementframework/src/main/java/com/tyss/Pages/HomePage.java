@@ -33,7 +33,22 @@ public class HomePage  {
     @FindBy (xpath = "//span[text()='Teacher']")
     private WebElement teacherLink;
     
-    @FindBy (xpath = "//span[text()='Subject Routing']")
+   
+	@FindBy (xpath="//a[text()=' Add Teacher']")
+    private WebElement addTeacherLink;
+	
+	@FindBy(xpath="//a[contains(.,' All Teacher')]")
+	private WebElement addAllTeacherLnk;
+    
+    public WebElement getAddAllTeacherLnk() {
+		return addAllTeacherLnk;
+	}
+
+	public WebElement getIngeniousDeveloperLink() {
+		return ingeniousDeveloperLink;
+	}
+
+	@FindBy (xpath = "//span[text()='Subject Routing']")
     private WebElement subjectRoutingLink;
     
     @FindBy (xpath = "//span[text()='Timetable']")
@@ -100,6 +115,10 @@ public class HomePage  {
 	public WebElement getTeacherLink() {
 		return teacherLink;
 	}
+	
+	public WebElement getAddTeacherLink() {
+			return addTeacherLink;
+		}
 
 	public WebElement getSubjectRoutingLink() {
 		return subjectRoutingLink;

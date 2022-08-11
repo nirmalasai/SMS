@@ -34,7 +34,12 @@ public class TeacherPage {
 	private WebElement photoUpload;
 	@FindBy(id = "btnSubmit")
 	private WebElement submitBtn;
-//utilization
+	@FindBy(xpath="//h1[contains(.,'Teacher')]")
+	private WebElement teacherPageTitle;
+public WebElement getTeacherPageTitle() {
+		return teacherPageTitle;
+	}
+	//utilization
 	public WebElement getIndexnumberTxt() {
 		return indexnumberTxt;
 	}
@@ -63,6 +68,7 @@ public class TeacherPage {
 		return submitBtn;
 	}
 	//business library
+	
 	public void StudentPage(String IndxNumber,String fullName)
 	{
 		indexnumberTxt.sendKeys(IndxNumber);
@@ -81,7 +87,7 @@ public class TeacherPage {
 	}
 	public void genderSelect(WebDriverUtility driverUtility,int index)
 	{
-		driverUtility.select(genderSelect,index);
+		driverUtility.select(genderSelect, index);
 	}
 	public void phoneNoTxt(String number)
 	{

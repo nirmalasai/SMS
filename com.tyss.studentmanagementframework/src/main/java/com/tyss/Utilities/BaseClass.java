@@ -36,6 +36,7 @@ public class BaseClass {
 	public void lauchTheBrowser()throws IOException
 	{
 		String BROWSER=fileUtilities.getPropertKeyValue("browser");
+		System.out.println(BROWSER);
 		String URL=fileUtilities.getPropertKeyValue("url");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
@@ -47,7 +48,7 @@ public class BaseClass {
 		}
 		else
 		{
-			WebDriverManager.chromedriver().create();
+			WebDriverManager.firefoxdriver().create();
 		}
 		System.out.println("Browser launched");
 		

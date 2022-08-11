@@ -385,13 +385,13 @@ public class WebDriverUtility {
 	 * @param driver
 	 * @param expectedMsg
 	 */
-	public void switchToAlertPopupandAccept(WebDriver driver) {
+	public void switchToAlertPopupandAccept(WebDriver driver,String expectedMsg) {
 		Alert alert = driver.switchTo().alert();
-//		if (alert.getText().trim().equalsIgnoreCase(expectedMsg.trim())) {
-//			System.out.println("alert msg is verified");
-//		} else {
-//			System.out.println("alert msg is not verified");
-//		}
+		if (alert.getText().trim().equalsIgnoreCase(expectedMsg.trim())) {
+			System.out.println("alert msg is verified");
+		} else {
+		System.out.println("alert msg is not verified");
+		}
 		alert.accept();
 	}
 
