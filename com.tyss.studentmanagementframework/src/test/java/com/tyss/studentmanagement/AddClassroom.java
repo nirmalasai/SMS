@@ -16,7 +16,7 @@ public class AddClassroom extends BaseClass{
 	public void classroom()throws EncryptedDocumentException, FileNotFoundException {
 		
 		AdminHomePage adminhomepage=new AdminHomePage(driver);
-		adminhomepage.getClassroom().click();	
+		adminhomepage.getClassroom().click();	//done
 		
 	}
 	
