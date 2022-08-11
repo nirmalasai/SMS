@@ -13,7 +13,7 @@ import com.tyss.Pages.loggingAsDad.AddStudentPage;
 import com.tyss.Utilities.BaseClass;
 import com.tyss.Utilities.WebDriverUtility;
 
-public class AddStudentAndVerifyInAllStudent extends BaseClass {
+public class AddStudentAndVerifyInAllStudentTest extends BaseClass {
 
 	@Test
 	public void addStudentAndVerifyStudentDetails() throws EncryptedDocumentException, FileNotFoundException, IOException

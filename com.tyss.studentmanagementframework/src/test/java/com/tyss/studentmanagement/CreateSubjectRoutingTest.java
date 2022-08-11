@@ -46,9 +46,10 @@ public class CreateSubjectRoutingTest extends BaseClass {
 		page.teacher(wLib, 2);
 		page.fee("12345");
 		page.submit();
-//		wLib.waitTillElementToClick(driver, homePage.getIngeniousDeveloper());
-		
 		Thread.sleep(50000);
+		wLib.waitTillElementToClick(driver, homePage.getIngeniousDeveloper());
+		
+		
 		System.out.println("done");
 		
 		

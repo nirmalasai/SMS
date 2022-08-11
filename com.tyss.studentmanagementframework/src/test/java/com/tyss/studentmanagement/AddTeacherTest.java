@@ -54,6 +54,8 @@ public void addTeacherpage()throws EncryptedDocumentException, IOException, Inte
 	
 	addTeacher.submitBtn();
 	Thread.sleep(5000);
+	wLib.waitTillElementToClick(driver, homepage.getMyProfileLink());
+
 	
 	
 
