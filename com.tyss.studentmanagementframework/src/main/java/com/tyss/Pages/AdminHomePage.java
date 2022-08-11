@@ -317,5 +317,11 @@ public class AdminHomePage
 		IngeniousDeveloper1.click();
 		Signout.click();
 	}
+	
+	public void clickoncreateexam()
+	{
+		Exam.click();
+		CreateExam.click();
+	}
 
 }
