@@ -108,5 +108,4 @@ public WebElement getTeacherPageTitle() {
 		 submitBtn.click();
 	}
 	
-
 }

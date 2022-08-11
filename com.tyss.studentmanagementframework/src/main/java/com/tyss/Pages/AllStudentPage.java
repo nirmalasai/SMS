@@ -40,6 +40,7 @@ public class AllStudentPage extends BaseClass
 
 	public WebElement getConformationMsg() {
 		return conformationMsg;
+	}
 
 	public WebElement getFinalpaymentsubmitbutton() {
 		return finalpaymentsubmitbutton;
@@ -54,9 +55,7 @@ public class AllStudentPage extends BaseClass
 	public WebElement getSubmitbtn() {
 		return submitbtn;
 	}
-	public WebElement getSelectGrade1() {
-		return selectGrade1;
-	}
+	
 	public WebElement getYesacceptBtn() {
 		return yesacceptBtn;
 	}

@@ -18,7 +18,7 @@ public class AllStudent extends BaseClass {
 		adminhomepage.getAllStudent().click();
 		AllStudentPage allstudentpage = new AllStudentPage(driver);
 		allstudentpage.getGradeDropDown().click();
-		allstudentpage.getSelectGrade1().click();
+		//allstudentpage.getSelectGrade1().click();
 		allstudentpage.getSubmitbtn().click();
 		allstudentpage.getLeavebtn().click();
 		//Thread.sleep(5000);
