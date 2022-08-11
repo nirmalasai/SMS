@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 import com.tyss.Utilities.BaseClass;
 
 public class AllStudentPage extends BaseClass
@@ -17,9 +19,12 @@ public class AllStudentPage extends BaseClass
 	@FindBy(xpath ="//button[@id=\"btnPaid\"]")private WebElement paidbutton;
 	@FindBy(xpath ="//cr-button[@role=\"button\"]")private WebElement print;
 	@FindBy(xpath ="//button[@id=\"btnSubmit\"]")private WebElement finalpaymentsubmitbutton;
+
 	@FindBy(xpath="//button[.='Submit']")private WebElement submitbtn;
 	@FindBy(xpath="//td[.='1']/..//a[.='Edit']")private WebElement editbtn;
 	@FindBy(xpath="//td[.='1']/..//a[.='Leave']")private WebElement leavebtn;
+	@FindBy(id="btnYes")private WebElement yesacceptBtn;
+	@FindBy(xpath="(//strong[@style='color:red;'])[3]")private WebElement conformationMsg;
 	@FindBy(xpath="//td[.='1']/..//a[.='Edit Subject']")private WebElement editSubjecct;
 	@FindBy(xpath="//td[.='1']/..//a[.='Upgrade Grade']")private WebElement upgradeGrade;
 	@FindBy(xpath="//td[.='1']/..//a[.='Add Payment']")private WebElement addPayment;
@@ -32,6 +37,10 @@ public class AllStudentPage extends BaseClass
 	public WebElement getGradeDropDown() {
 		return gradeDropDown;
 	}
+
+	public WebElement getConformationMsg() {
+		return conformationMsg;
+
 	public WebElement getFinalpaymentsubmitbutton() {
 		return finalpaymentsubmitbutton;
 	}
@@ -40,9 +49,16 @@ public class AllStudentPage extends BaseClass
 	}
 	public WebElement getPaidbutton() {
 		return paidbutton;
+
 	}
 	public WebElement getSubmitbtn() {
 		return submitbtn;
+	}
+	public WebElement getSelectGrade1() {
+		return selectGrade1;
+	}
+	public WebElement getYesacceptBtn() {
+		return yesacceptBtn;
 	}
 	public WebElement getSearchTextBox() {
 		return searchTextBox;
@@ -65,6 +81,11 @@ public class AllStudentPage extends BaseClass
 	public WebElement getViewPayment() {
 		return viewPayment;
 	}
+
+	
+	
+	
+
 
 	public void allstudentdropdown()
 	{
@@ -91,5 +112,6 @@ public class AllStudentPage extends BaseClass
 	    
 		
 	}
+
 
 }
