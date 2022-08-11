@@ -17,7 +17,6 @@ public class TeacherMyStudentExamMarksPage extends WebDriverUtility
 		}
 
 		//declaration
-
 		@FindBy(xpath ="//select[@id=\"grade\"]")
 		private WebElement gradedropdown;
 		
