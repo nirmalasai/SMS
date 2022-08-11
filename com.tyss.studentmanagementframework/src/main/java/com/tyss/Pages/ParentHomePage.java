@@ -233,10 +233,17 @@ public class ParentHomePage
 		Signout.click();
 	}
 
+	public void mysonsmark()
+	{
+		Exam.click();
+		MySonsExamMarks.click();
+	}
+	public void clickonallsubject()
+	{
+		Subject.click();
+		AllProjects.click();
 
-
-
-
+	}
 
 
 }

@@ -252,5 +252,17 @@ public class TeacherHomePage
 		Teacher1fdsfhdfgdhi.click();
 		Signout.click();
 	}
+	public void clickonmystudentexam()
+	{
+		Exam.click();
+		MyStudentExamMarks.click();
 
+	}
+	public void clickonallsubject()
+	{
+		Subject.click();
+		AllSubject.click();
+	}
+
+	
 }

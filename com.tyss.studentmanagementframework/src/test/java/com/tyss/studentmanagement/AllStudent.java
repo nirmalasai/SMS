@@ -25,7 +25,6 @@ public class AllStudent extends BaseClass {
 		allstudentpage.getYesacceptBtn().click();
 		WebDriverUtility web = new WebDriverUtility();
 		System.out.println(allstudentpage.getConformationMsg().getText());
-		
 		Thread.sleep(6000);
 		
 		
