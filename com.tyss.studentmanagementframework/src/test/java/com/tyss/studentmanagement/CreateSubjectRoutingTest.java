@@ -20,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateSubjectRoutingTest extends BaseClass {
 @Test
-	public void main(WebDriver driver) throws InterruptedException {
+	public void main() throws InterruptedException {
 //		JavaUtility jLib=new JavaUtility();
 //		ExcelUtility eLib=new ExcelUtility();
 //		FileUtility fLib=new FileUtility();
@@ -32,7 +32,7 @@ public class CreateSubjectRoutingTest extends BaseClass {
 //		WebDriver driver = new ChromeDriver();
 		wLib.waitTillPageLoad(driver);
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
-		AdminLoginPage loginPage=new AdminLoginPage(driver);
+		LoginPage loginPage=new LoginPage(driver);
 		HomePage homePage=new HomePage(driver);
 		SubjectRoutingPage page=new SubjectRoutingPage(driver);
 //		wLib.maximizeTheBrowser(driver);
@@ -46,9 +46,10 @@ public class CreateSubjectRoutingTest extends BaseClass {
 		page.teacher(wLib, 2);
 		page.fee("12345");
 		page.submit();
-		wLib.waitTillElementToClick(driver, homePage.getIngeniousDeveloper());
+//		wLib.waitTillElementToClick(driver, homePage.getIngeniousDeveloper());
 		
-		
+		Thread.sleep(50000);
+		System.out.println("done");
 		
 		
 	
