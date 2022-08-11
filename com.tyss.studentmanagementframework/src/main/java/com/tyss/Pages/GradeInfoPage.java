@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GradeInfoPage {
+import com.tyss.Utilities.WebDriverUtility;
+
+public class GradeInfoPage extends WebDriverUtility {
 	//Declaration
 	@FindBy(xpath="//input[@type='search']")private WebElement searchBox;
 	@FindBy(xpath="//td[.='Grade 1']/..//a[.='Edit']")private WebElement editLink;
